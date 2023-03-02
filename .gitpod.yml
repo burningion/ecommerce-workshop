@@ -5,8 +5,5 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - init: pip install "typer[all]"
+  - init: pip install textual
     command: python3 cli.py
-
-
-
