@@ -1,3 +1,3 @@
 [default]
-aws_access_key_id={{ AKIAQVQRNHUTXMULTZ5R }}
+aws_access_key_id={{ CUSTOM_IAM_LAMBDA_ACCESS_KEY_ID }}
 aws_secret_access_key={{ CUSTOM_IAM_LAMBDA_SECRET_ACCESS_KEY }}
