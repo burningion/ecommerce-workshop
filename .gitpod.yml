@@ -3,4 +3,6 @@ image:
 
 tasks:
   - init: pip install textual
-    command: doppler setup --no-interactive && doppler run --mount /home/gitpod/.aws/credentials --mount-template aws-creds -- doppler run --mount /home/gitpod/.aws/config --mount-template aws-conf -- python3 cli.py
+#    unfortunately can't do named pipes because aws cli tool refuses to read them :/
+#    command: doppler setup --no-interactive && doppler run --mount /home/gitpod/.aws/credentials --mount-template aws-creds -- doppler run --mount /home/gitpod/.aws/config --mount-template aws-conf -- bash
+    command: doppler setup --no-interactive && doppler secrets substitute aws-creds > ~/.aws/credentials && doppler secrets substitute aws-conf > ~/.aws/configuration && python3 cli.py
